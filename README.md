@@ -1,2 +1,2 @@
 # locomodo
-Mood Based Excursion Application
+Mood Based Excursion 
