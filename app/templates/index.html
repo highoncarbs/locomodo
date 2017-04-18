@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Locomood</title>
+	<link rel="stylesheet" href="../static/main.css">
+	<link rel="stylesheet" href="../static/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+<body>
+	<div class="w3-row w3-container">
+		<div class="search">
+		<form action="{{url_for('index')}}" method="POST" id="mainForm">
+
+			<div class="search_nav">
+				<i class="fa fa-search icon" style="font-size: 45px;"></i>
+				<input type="search" placeholder="Where are you ?" id="search_bar" name="search"/>
+				<input style="display: none" value="" id="iconInput" name="iconInput" />
+				</div>
+
+			<div class="mood_main">
+				<h3>How's your mood ?</h3>
+				<input class="mood" name="happy" type="image" src="../static/emoji/1f600.svg" id="happy" />
+				<input class="mood" name="party" type="image" src="../static/emoji/1f60e.svg" id="party"/>
+				<input class="mood" name="sad" type="image" src="../static/emoji/1f622.svg"  id="gloomy"/>
+				<input class="mood" name="poi" type="image" src="../static/emoji/1f62f.svg"  id="poi"/>
+				<input class="mood" name="shopping" type="image" src="../static/emoji/1f911.svg"  id="shopping"/>
+			</div>
+
+		</form>
+		</div>
+		<div class="search_result" id="search_result">			
+		{% for i in range(10)%}	
+		<div class="card">
+			    <img src="{{photo_url}}">                
+                <h3>{{title}}</h3>
+                <div class="overlay">
+            	</div>
+        </div>
+        {% endfor %}
+
+        </div>
+        	
+
+</body>
+</html>
+<script type="text/javascript">
+	
+	var happy =  document.getElementById("happy");
+	var searchBar = document.getElementById("search_bar");
+	var form = document.getElementById("mainForm");
+	var iconInput = document.getElementById('iconInput');
+	happy.onclick = function() {
+		iconInput.value = "happy";
+		form.submit();
+	};
+
+	var party =  document.getElementById("party");
+	party.onclick = function() {
+		iconInput.value = "party";
+		form.submit();
+	};
+
+	var gloomy =  document.getElementById("gloomy");
+	gloomy.onclick = function() {
+		iconInput.value = "gloomy";
+		form.submit();
+	};
+
+	var poi =  document.getElementById("poi");
+	poi.onclick = function() {
+		iconInput.value = "poi";
+		form.submit();
+	};
+
+
+	var shopping=  document.getElementById("shopping");
+	shopping.onclick = function() {
+		iconInput.value = "shopping";
+		form.submit();
+	};
+
+</script>

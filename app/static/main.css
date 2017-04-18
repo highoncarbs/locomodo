@@ -1,0 +1,151 @@
+body{
+	padding-top: 100px;
+	font-family: 'Roboto' , sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+.w3-container{
+	margin-left: 30px;
+}
+.search_nav{
+	font-family: 'Roboto' , sans-serif;
+	margin-bottom: 30px;
+}
+.search input#search_bar{
+	font-family: 'Roboto' , sans-serif;
+	border-style: none;
+	width: 800px;
+	font-size: 70px;
+	font-weight: 900;
+	padding-left: 77px;
+	border: none;
+	transition: 0.3s all;
+	border-bottom: 1px solid lightgrey;
+}
+h3{
+	font-weight: 100;
+	padding-left: 10px;
+}
+.icon{
+	position: absolute;
+	opacity: 0.3;
+	padding-left: 15px;
+	padding-right: 10px;
+	margin-top: 27px; 
+}
+
+.search input:hover{
+	border: none;
+}
+
+#submit{
+	font-weight: 400;
+	border : none;
+	font-size: 30px;
+	background-color: grey;
+	color: white;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+input:required {
+  border:none;
+}
+
+.moon_main input{
+	display: inline-block;
+	width: 100%;
+
+}
+.mood{
+	margin-top: 10px;
+	margin-right: 15px;
+	opacity: 0.5;
+}
+.mood:hover{
+   
+    opacity: 1;
+}
+.mood_main{
+	padding-bottom: 20px;
+}
+.search_result{
+	margin-top: 75px;
+	font-family: 'Roboto' , sans-serif;
+}
+/* Card CSS*/
+.card{
+	width: 260px;
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 25px;
+
+}
+.card img{
+	height: 260px;
+	width: auto;
+	border-radius: 5px;
+}
+.overlayx:hover{
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.overlay:before, .overlay:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:100px / 10px;
+
+}
+.card h3{
+	margin-left: 0;
+	padding-left: 0;
+}
+.overlay{
+	
+	position: absolute;
+	background-color: black;
+	border-radius: 5px;
+	top:0;
+	left:0;
+	
+	height: 260px;
+	width: 100%;
+	opacity:0;4
+}
+.overlay:hover{
+	opacity : 0.4;
+	box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+	transition: 0.3s all;
+}
+.card a{
+	font-weight: 300;
+	font-size: 20px;
+
+}
+.overlay{
+	
+	position: absolute;
+	background-color: black;
+	border-radius: 5px;
+	top:0;
+	left:0;
+	width: 260px;
+	height: 260px;
+	opacity:0;
+
+}
+.overlay:hover{
+	opacity : 0.4;
+	box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+	transition: 0.3s all;
+}
